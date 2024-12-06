@@ -1,0 +1,17 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    <h2>Resultados de búsqueda</h2>
+    {% if query %}
+        <p>Resultados para: {{ query }}</p>
+        {% for auto in autos %}
+            <article>
+                <h3>{{ auto.marca }} {{ auto.modelo }}</h3>
+                <p>Año: {{ auto.año }}</p>
+                <p>{{ auto.descripcion }}</p>
+            </article>
+        {% empty %}
+            <p>No se encontraron resultados.</p>
+        {% endfor %}
+    {% endif %}
+{% endblock %}
