@@ -12,7 +12,7 @@ A. Creación de Categorías
 Click en "Nueva Categoría" en la navegación
 Completa el formulario:
 
-Nombre (ejemplo: "Deportivos")
+Nombre (ejemplo: "Usados")
 Descripción
 Selecciona autos (estará vacío en este momento)
 
@@ -23,10 +23,11 @@ B. Creación de Autos
 Click en "Nuevo Auto" en la navegación
 Completa el formulario:
 
-Marca (ejemplo: "Ferrari")
-Modelo (ejemplo: "F40")
-Año (ejemplo: "1987")
+Marca (ejemplo: "Volkswagen")
+Modelo (ejemplo: "Crossfox")
+Año (ejemplo: "2012")
 Descripción
+Imagen
 
 
 
