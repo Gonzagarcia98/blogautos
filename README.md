@@ -1,5 +1,7 @@
-Blog de Autos - Guía de Pruebas y Funcionalidades
-Esta guía te ayudará a probar todas las funcionalidades del blog de autos en orden lógico.
+***Blog de Autos - Guía de Pruebas y Funcionalidades***
+
+*Esta guía te ayudará a probar todas las funcionalidades del blog de autos en orden lógico.*
+
 Orden de Pruebas
 1. Configuración Inicial
 bashCopypython manage.py runserver
