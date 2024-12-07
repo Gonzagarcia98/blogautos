@@ -124,10 +124,14 @@
             <a href="{% url 'auto_nuevo' %}">Nuevo Auto</a>
             <a href="{% url 'reseña_nueva' %}">Nueva Reseña</a>
             <a href="{% url 'categoria_nueva' %}">Nueva Categoría</a>
+            <a href="{% url 'lista_categorias' %}">Ver Categorías</a>
         </nav>
-        <form class="search-form" action="{% url 'buscar' %}" method="get">
-            <input type="text" name="q" placeholder="Buscar autos...">
-            <button type="submit">Buscar</button>
+        <form action="{% url 'buscar' %}" method="get" style="margin: 10px auto; max-width: 600px;"> <!-- Ajusta el max-width aquí -->
+            <input type="text" name="q" placeholder="Buscar autos..." 
+                   style="width: 80%; padding: 8px; border-radius: 4px; border: outset; margin-right: 5px;">
+            <button type="submit" style="padding: 8px 15px; background-color: #8B0000; color: white; border: solid; border-radius: 4px; cursor: pointer;">
+                Buscar
+            </button>
         </form>
     </header>
     <main>

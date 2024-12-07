@@ -24,4 +24,5 @@ urlpatterns = [
     path('categoria/nueva/', views.categoria_nueva, name='categoria_nueva'),
     path('buscar/', views.buscar, name='buscar'),
     path('auto/editar/<int:pk>/', views.auto_editar, name='auto_editar'),
+    path('categorias/', views.lista_categorias, name='lista_categorias'),
 ]
