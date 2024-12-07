@@ -1,85 +1,91 @@
-***Blog de Autos - Guía de Pruebas y Funcionalidades***
+***Blog de Autos - Guía de Prueba***
 
-*Esta guía te ayudará a probar todas las funcionalidades del blog de autos en orden lógico.*
+Este proyecto es un blog especializado en autos desarrollado con **Django**. A continuación, encontrarás una guía paso a paso para probar todas las funcionalidades.
 
-Orden de Pruebas
-1. Configuración Inicial
+**Configuración Inicial**
+
+Inicia el servidor:
+
 bashCopypython manage.py runserver
-Visita http://127.0.0.1:8000/
-2. Prueba de Funcionalidades (en este orden)
-A. Creación de Categorías
 
-Click en "Nueva Categoría" en la navegación
+Visitá http://127.0.0.1:8000/
+
+**Orden de Pruebas**
+
+1. Gestión de Categorías
+Primero, es necesario crear algunas categorías que usaremos más adelante:
+
+Te dirigis a "Nueva Categoría" en la navegación
+Creas al menos 3 categorías (ejemplo: Recomendado, No recomendado, Sin probar)
+Podes ver todas las categorías creadas en "Ver Categorías"
+
+2. Gestión de Autos
+Una vez creadas las categorías, podes comenzar a agregar autos:
+
+Vas a "Nuevo Auto"
 Completa el formulario:
 
-Nombre (ejemplo: "Usados")
+Marca y modelo
+Año de fabricación
 Descripción
-Selecciona autos (estará vacío en este momento)
+Seleccioná una imagen
+Asigná una o más categorías
 
 
+Los autos creados aparecerán en la página principal
 
-B. Creación de Autos
+3. Gestión de Reseñas
+Para cada auto se pueden agregar reseñas:
 
-Click en "Nuevo Auto" en la navegación
-Completa el formulario:
+Vas a "Nueva Reseña"
+Seleccioná el auto al que quieres agregar la reseña
+Completa:
 
-Marca (ejemplo: "Volkswagen")
-Modelo (ejemplo: "Crossfox")
-Año (ejemplo: "2012")
-Descripción
-Imagen
-
-
-
-C. Creación de Reseñas
-
-Click en "Nueva Reseña" en la navegación
-Completa el formulario:
-
-Selecciona el auto creado anteriormente
-Añade título
-Escribe el contenido de la reseña
+Título de la reseña
+Contenido
 
 
+Las reseñas quedarán vinculadas al auto seleccionado
 
-D. Búsqueda
+4. Edición de Autos
+Para cada auto creado podrás:
 
-Usa el buscador en la parte superior
-Prueba buscar por:
+Modificar sus datos desde el botón "Editar"
+Cambiar su imagen
+Actualizar las categorías asignadas
 
-Marca del auto creado
-Modelo del auto creado
+5. Búsqueda
+Proba el buscador en la parte superior:
 
+Búsqueda por marca
+Búsqueda por modelo
 
-
-3. Ubicación de las Funcionalidades
-Plantillas (templates/blog/)
+Ubicación de Funcionalidades
+Templates
+Ubicados en blog/templates/blog/:
 
 base.html: Template principal con navegación
-home.html: Página de inicio con lista de autos
-auto_form.html: Formulario de creación de autos
-reseña_form.html: Formulario de creación de reseñas
-categoria_form.html: Formulario de creación de categorías
-buscar.html: Resultados de búsqueda
+home.html: Página principal con lista de autos
+auto_form.html: Formulario para crear/editar autos
+categoria_form.html: Formulario de categorías
+lista_categorias.html: Vista de categorías existentes
 
-Vistas (views.py)
+Vistas
+En blog/views.py:
 
-home: Vista de la página principal
+home: Vista principal
 auto_nuevo: Creación de autos
-reseña_nueva: Creación de reseñas
+auto_editar: Edición de autos existentes
 categoria_nueva: Creación de categorías
+lista_categorias: Visualización de categorías
 buscar: Función de búsqueda
 
-Modelos (models.py)
+Modelos
+En blog/models.py:
 
-Auto: Datos de los vehículos
-Reseña: Reseñas de los autos
-Categoria: Categorización de vehículos
+Auto: Información de vehículos
+Categoria: Clasificación de autos
 
-URLs (urls.py)
+Notas Importantes
 
-/: Página principal
-/auto/nuevo/: Crear auto
-/reseña/nueva/: Crear reseña
-/categoria/nueva/: Crear categoría
-/buscar/: Búsqueda
+Las imágenes se guardan en la carpeta media/autos/
